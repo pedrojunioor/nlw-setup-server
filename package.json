@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "migdev": "npx prisma migrate dev",
+    "dbstudio": "npx prisma studio",
+    "generate": "npx prisma generate",
+    "seed": "npx prisma db seed"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +19,13 @@
     "fastify": "^4.15.0"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.1.0",
     "prisma": "^4.13.0",
+    "prisma-erd-generator": "^1.5.4",
     "tsx": "^3.12.6",
     "typescript": "^5.0.4"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   }
 }
